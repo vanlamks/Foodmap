@@ -46,12 +46,12 @@ class Menu(models.Model):
     restaurant_number = models.ForeignKey(
         Restaurant,
         on_delete=models.CASCADE,
-        db_column='restaurant_number'  # Thêm dòng này để giữ đúng tên cột
+        db_column='restaurant_number', # Thêm dòng này để giữ đúng tên cột
     )
     menu_name = models.CharField(max_length=100)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image_url = models.CharField(max_length=255)
+    image_url = models.CharField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
